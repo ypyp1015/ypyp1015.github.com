@@ -1,4 +1,4 @@
-香港
+香港,#genre#
 凤凰资讯HD,http://117.169.120.138:8080/live/fhzixun/.m3u8
 香港31台HD,http://rthklive1-lh.akamaihd.net/i/rthk31_1@167495/index_2052_av-b.m3u8
 香港翡翠台,http://116.199.5.51:8114/index.m3u8?Fsv_chan_hls_se_idx=12&FvSeid=1&Fsv_ctype=LIVES&Fsv_otype=1&Provider_id=&Pcontent_id=.m3u8
@@ -29,7 +29,7 @@ TVB明珠台,http://116.199.5.51:8114/00000000/hls/index.m3u8?Fsv_chan_hls_se_id
 凤凰资讯HD,http://117.169.120.138:8080/live/fhzixun/.m3u8
 凤凰香港1,http://223.82.250.72/live/fhhongkong/1.m3u8
 
-澳門
+澳門,#genre#
 澳門衛視,http://stream.mastvnet.com/MSTV/SD/live.m3u8
 澳門1,http://61.244.22.4/ch3/ch3.live/playelist.m3u8
 澳丫卫视,http://stream.mastvnet.com/MASTV/sd/live.m3u8
@@ -52,7 +52,7 @@ TVB明珠台,http://116.199.5.51:8114/00000000/hls/index.m3u8?Fsv_chan_hls_se_id
 澳门莲花,http://live-rtmp.lotustv.duolaibo.cn/lotustv/5562e9e4d409d24c9600075c.m3u8
 澳门资讯,http://live3.tdm.com.mo:1935/ch5/info_ch5.live/playlist.m3u8
 
-台灣
+台灣,#genre#
 TVBS新闻台,http://60.199.188.61/HLS/WG_TVBS-N/index.m3u8
 TVBS新闻台,http://60.199.188.61/HLS/WG_TVBS-N/01.m3u8
 TVBS新闻台,http://60.199.188.61/HLS/WG_TVBS-N/02.m3u8

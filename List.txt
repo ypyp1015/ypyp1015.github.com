@@ -1,3 +1,13 @@
+整理,#genre#
+TVBS新聞台HD,http://lss.line-scdn.net/cc_tw/p/live/hV2XbBSUQCBw3dhYMDWMVK15PVCpKL05CW35HKUUbV3kYI0dMDn8RckYTAH8cfhxNCn1OLkMbUipLbk8YW3gSK0cTSS1JNE5IUGJGeUgEVy9KIE5KWHRG/720/chunklist.m3u8
+東森新聞HD,http://lss.line-scdn.net/cc_tw/p/live/hcHNsx-zTPWYjZyN2G3IgUUgLZ1YOOXk1Sm9yU14KYgMOMnI2GGQkAVNaYwBeO383HWx7UwEMYFEbOygzSjtzBVAUYlZBOng4UGx2AEkMYVxeO3o4Tw/720/chunklist.m3u8
+華視新聞資訊HD,https://lss.line-scdn.net/cc_tw/p/live/hvJoxVeXZKGQAbDZ0Onk1U2kEJQYqZm5hOmRnVn8BdwEvOWpkOjQzBXAIfgV7NjxhPGduVnQIf1x-dG9gbGNnUScJaVV-Lm4wZ3hmAX8ed1d8Om4yb25m/720/chunklist.m3u8
+民視HD,http://lss.line-scdn.net/cc_tw/p/live/h4PqOBgV_an4eW3RuJE53SXdhNk5lU3kgJFMlS2A2NRsxDn8tcVImEG4_YBhpAyR6cFAsTGgwN0lnQy16clVzGWs-K09gGSwqeU8kG2EpNk5hDSwocVkk/720/chunklist.m3u8
+CN卡通頻道,http://lss.line-scdn.net/cc_tw/p/live/hk_XGpfPFNXE3UythDUYoRl49Y0hMB3MvClt6RUU-ahQYB3txCg0sQkU4bxAYCHFyCVhzRBc5aUZLS3J1W10pQkQ2dEBJEXMlUEd7FEghaUFLBXMnWFF7/720/chunklist.m3u8
+[金***],http://lss.line-scdn.net/cc_tw/p/live/hhiowkIFmNkcAYyhXOnYrcGkLbnF9PnkTPGt5c3MOaSIvN3hHPTt-JnNZPiEqbCdCbGhwciUJb3B5e3FDbG0tIXUGd3Z-IXATZ3d4In4RaX52NXARb2F4/720/chunklist.m3u8
+空中英語教室,http://lss.line-scdn.net/cc_tw/p/live/hHzV4TCxJFlQ6IAhEAzULY1BKGmUVKFFQVyhZZk5NSTEWdQMHViMLNRlKSW0TL1BXUitQYRpNQGZOOFFQVS4PZEhMV2VHYlAAXjRYMUZSTmxNfVECXis/720/chunklist.m3u8
+華藝綜合台,http://lss.line-scdn.net/cc_tw/p/live/hO8cF8e37ERYOUg8GNkcMIWVrTSV1CQJAYVpfc3g_TnMjBwRFYwlbeHxoGSN0BwNEZ1lXJHo4Ty5zSlYSYF0Pciw7UCdyEFdCa0Zfc3MgSixzDlZIYg/720/chunklist.m3u8
+
 香港,#genre#
 凤凰资讯HD,http://117.169.120.138:8080/live/fhzixun/.m3u8
 香港31台HD,http://rthklive1-lh.akamaihd.net/i/rthk31_1@167495/index_2052_av-b.m3u8

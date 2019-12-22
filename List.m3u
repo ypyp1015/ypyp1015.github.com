@@ -28,7 +28,7 @@ http://pili-live-hdl.qhmywl.com:80/dsdtv/0c795e6e7f8e067dd4110a57375a71b9.m3u8
 #EXTINF:-1 tvg-id="673" tvg-name="CN卡通頻道" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/CNCartoon.png" group-title="卡通親子",CN卡通頻道
 http://pili-live-hdl.qhmywl.com:80/dsdtv/c865782e4a131efe17651165835ca37e.m3u8
 #EXTINF:-1 tvg-id="673" tvg-name="CN卡通頻道" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/CNCartoon.png" group-title="卡通親子",CN卡通頻道(Y191223
-http://pili-live-http://lss.line-scdn.net/cc_tw/p/live/hk_XGpfPFNXE3UythDUYoRl49Y0hMB3MvClt6RUU-ahQYB3txCg0sQkU4bxAYCHFyCVhzRBc5aUZLS3J1W10pQkQ2dEBJEXMlUEd7FEghaUFLBXMnWFF7/720/chunklist.m3u8
+http://lss.line-scdn.net/cc_tw/p/live/hk_XGpfPFNXE3UythDUYoRl49Y0hMB3MvClt6RUU-ahQYB3txCg0sQkU4bxAYCHFyCVhzRBc5aUZLS3J1W10pQkQ2dEBJEXMlUEd7FEghaUFLBXMnWFF7/720/chunklist.m3u8
 #EXTINF:-1 tvg-id="7238" tvg-name="Animax" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/ANIMAXHD.png" group-title="卡通親子",ANIMAX
 http://pili-live-hdl.qhmywl.com:80/dsdtv/33de03293563010671a856688d63d4ee.m3u8
 #EXTINF:-1 tvg-id="7173" tvg-name="iFun1" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/ifun1.png" group-title="卡通親子",iFun1

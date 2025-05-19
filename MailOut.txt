@@ -1,0 +1,35 @@
+# 設定 Excel 檔案路徑與收件人
+SET ExcelFilePath TO $'''C:\\OrderList.xls'''
+SET TargetSheetName TO $'''RepairDetailQuery'''
+SET EmailRecipient TO $'''WilsonYang@taiwanmobile.com;xinlin@taiwanmobile.com;janhuadai@taiwanmobile.com'''
+DateTime.GetCurrentDateTime.Local DateTimeFormat: DateTime.DateTimeFormat.DateAndTime CurrentDateTime=> TodayDate
+SET EmailSubject TO TodayDate + $''' 建單完成'''
+# 附加 Excel 並讀取資料
+Excel.Attach DocumentName: $'''OrderList.xls''' Instance=> ExcelInstance2
+Excel.SortCellsFromExcel.SortWorksheet Instance: ExcelInstance2 SortParameters: { ^['Column1', 'Column2'], [$'''U''', $'''asc'''] } FirstRowIsHeader: True
+Excel.GetFirstFreeColumnRow Instance: ExcelInstance2 FirstFreeColumn=> FirstFreeColumn FirstFreeRow=> FirstFreeRow
+IF (FirstFreeRow - 1) < 1 THEN
+    Display.ShowMessageDialog.ShowMessage Title: $'''$\'\'\'資訊\'\'\'''' Message: $'''$\'\'\'工作表 \'%TargetSheetName%\' 的 F 欄沒有資料可處理。''' Icon: Display.Icon.Information Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False ButtonPressed=> ButtonPressed
+END
+Excel.ReadFromExcel.ReadCells Instance: ExcelInstance2 StartColumn: $'''F''' StartRow: 1 EndColumn: $'''U''' EndRow: FirstFreeRow ReadAsText: False FirstLineIsHeader: True RangeValue=> ExcelData3
+# 初始化 HTML 格式的 Email 內容
+SET EmailBody TO $'''<html><body>'''
+SET EmailBody TO EmailBody + $'''<p>從 Excel 檔案 %ExcelFilePath% (%TargetSheetName%) 擷取的資料：</p>'''
+SET EmailBody TO EmailBody + $'''<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" style=\"border-collapse: collapse;\">'''
+SET EmailBody TO EmailBody + $'''<tr><th>維修單號</th><th>建單秒數</th><th>GSPN單號</th><th>註記資訊</th><th>工程師</th></tr>'''
+# 逐列加入資料
+LOOP FOREACH CurrentRow IN ExcelData3
+    SET ValueF TO CurrentRow[0]
+    SET ValueG TO CurrentRow[1]
+    SET ValueH TO CurrentRow[2]
+    SET ValueI TO CurrentRow[3]
+    SET ValueU TO CurrentRow[15]
+    SET EmailBody TO EmailBody + $'''<tr><td>%ValueF%</td><td>%ValueG%</td><td>%ValueH%</td><td>%ValueI%</td><td>%ValueU%</td></tr>'''
+END
+# 結尾 HTML
+SET EmailBody TO EmailBody + $'''</table></body></html>'''
+# 傳送郵件
+Outlook.Launch Instance=> OutlookInstance
+Outlook.SendEmailThroughOutlook.SendEmail Instance: OutlookInstance Account: $'''xinlin@taiwanmobile.com''' SendTo: EmailRecipient Subject: EmailSubject Body: EmailBody IsBodyHtml: True IsDraft: False
+WAIT 600
+Outlook.Close Instance: OutlookInstance

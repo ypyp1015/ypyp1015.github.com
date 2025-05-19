@@ -1,0 +1,6 @@
+Excel.LaunchExcel.LaunchAndOpenUnderExistingProcess Path: $'''C:\\OrderList.xls''' Visible: True ReadOnly: False Instance=> ExcelInstance
+WAIT 2
+DISABLE Excel.Attach DocumentName: $'''C:\\OrderList.xls''' Instance=> ExcelInstance
+ON ERROR
+
+END

@@ -1,0 +1,29 @@
+DISABLE Excel.LaunchExcel.LaunchAndOpenUnderExistingProcess Path: $'''C:\\工程師對應BP.xlsx''' Visible: True ReadOnly: False Instance=> EngineerBP
+DISABLE Excel.ReadFromExcel.ReadCells Instance: EngineerBP StartColumn: $'''A''' StartRow: 2 EndColumn: $'''C''' EndRow: 24 ReadAsText: False FirstLineIsHeader: False RangeValue=> EngBP
+DISABLE Excel.CloseExcel.Close Instance: EngineerBP
+SET OPENName TO 0
+IF IsNotEmpty(DataFromWebPage[0][14]) THEN
+    DISABLE Display.ShowMessageDialog.ShowMessage Title: $'''WEB有工程師時''' Message: $'''Web工程師:%DataFromWebPage[0][14]%
+Excel工程師:%CurrentItem2%''' Icon: Display.Icon.None Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False ButtonPressed=> ButtonPressed4
+    LOOP FOREACH CurrentItem2 IN EngBP
+        IF CurrentItem2[1] = DataFromWebPage[0][14] THEN
+            SET OPENName TO CurrentItem2[2]
+            EXIT LOOP
+        ELSE
+            SET OPENName TO $'''- - - -'''
+        END
+        DISABLE Display.ShowMessageDialog.ShowMessage Title: $'''WEB有工程師時檢核結果''' Message: OPENName Icon: Display.Icon.None Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False ButtonPressed=> ButtonPressed5
+    END
+ELSE
+    LOOP FOREACH CurrentItem2 IN EngBP
+        DISABLE Display.ShowMessageDialog.ShowMessage Title: $'''比對之前''' Message: $'''工程師表:%CurrentItem2[0]%
+Excel表%CurrentItem[15]%''' Icon: Display.Icon.None Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False ButtonPressed=> ButtonPressed2
+        IF CurrentItem2[0] = CurrentItem[15] THEN
+            SET OPENName TO CurrentItem2[2]
+            EXIT LOOP
+        ELSE
+            SET OPENName TO $'''- - - -'''
+        END
+    END
+END
+DISABLE Display.ShowMessageDialog.ShowMessage Title: $'''終OPENName''' Message: OPENName Icon: Display.Icon.None Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False ButtonPressed=> ButtonPressed
